@@ -2,30 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="main">
-      <h1>BMI Calculator</h1>
-      <form action="#">
-        <label for="heightFeet">Height (Feet)</label>
-        <input type="number" id="heightFeet" placeholder="Enter feet" required>
-  
-        <label for="heightInch">Height (Inches)</label>
-        <input type="number" id="heightInch" placeholder="Enter inches" required>
-  
-        <label for="weight">Weight (kg)</label>
-        <input type="number" id="weight" placeholder="Enter weight in kg" required>
-  
-        <button type="submit">Calculate BMI</button>
-      </form>
+  <div class="main">
+    <h1>BMI Calculator</h1>
+    <form onsubmit="calculateBMI(); return false">
+      <label for="heightFeet">Height (Feet) </label>
+        <input type="number" id="heightInputFeet" min="0" max="10" placeholder="Enter feet" size="5" required step="1">
+      <label for="heightInch">Height (Inches)</label>
+        <input type="number" id="heightInputInch" min="0" max="11" placeholder="Enter inches" size="5" required
+          step="1">
+    
+
+      <br>
+
+      <label for="weight">Weight (kg)</label>
+      <input type="number" id="weightInputKg" placeholder="Enter weight in kg" min="0" max="200" required step="0.1" />
+      <br>
+      <button type="submit">Calculate</button>
+
+    </form>
+    <br>
+    <div id="result">
+      <h2 id="title"></h2>
+      <p id="suggestion"></p>
     </div>
-  </body>
-  
-<script type="module" src="app.js"></script>
+
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+
 </html>
