@@ -1,10 +1,8 @@
-window.calculateBMI =    function calculateBMI() {
+window.calculateBMI = function calculateBMI() {
     let heightInputFeet = document.querySelector('#heightInputFeet').value;
     let heightInputInch = document.querySelector('#heightInputInch').value;
 
     let weightInputKg = document.querySelector('#weightInputKg').value;
-    
-    
 
     heightInputFeet = parseInt(heightInputFeet);
     heightInputInch = parseInt(heightInputInch);
@@ -21,7 +19,6 @@ window.calculateBMI =    function calculateBMI() {
 
     let weightToLoss = (weightInputKg - idealWeight).toFixed(2);
     let weightToGain = (idealWeight - weightInputKg).toFixed(2);
-
 
     let suggestion = 'You are ';
 
@@ -45,8 +42,8 @@ window.calculateBMI =    function calculateBMI() {
     }
 
 
-document.querySelector('#title').innerHTML = `Ideal weight: ${idealWeight.toFixed(2)}kg`;
-document.querySelector('#suggestion').innerHTML = suggestion;
-                            
-}
+    document.querySelector('#title').innerHTML = `Ideal weight: ${idealWeight.toFixed(2)}kg`;
+    document.querySelector('#suggestion').innerHTML = suggestion;
+
+};
 
